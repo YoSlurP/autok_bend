@@ -10,7 +10,7 @@ fs.readFile("autok.csv","utf-8",(error,data)=>{
         let sorok = data.split("\n");
         for(let sor of sorok){
             let s= sor.split(";");
-            autok.push({id:s[0], tipus:s[1], suly:s[2]*1,loero:s[3]*1})
+            autok.push({id:s[0]*1, tipus:s[1], suly:s[2]*1,loero:s[3]*1})
         }
         for(let a of autok)if(a.id>nextId)nextId=a.id;
         nextId++;
